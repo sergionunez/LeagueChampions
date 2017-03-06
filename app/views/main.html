@@ -1,23 +1,22 @@
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
-</div>
+<div class="landing">
+  <!-- loader mientras hace peticiones -->
+  <div class="full" ng-hide="main.index">
+    <div class="loader">
 
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
+    </div>
+  </div>
 
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
+  <!-- interfaz una vez cargada -->
+  <h1 class="text-center" ng-show="main.index">Champions</h1>
 
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
+  <div class="row" ng-show="main.index">
+    <div class="col-xs-6" ng-repeat="champion in main.index | toArray | orderBy: 'name'">
+      <a href="#">
+        <div class="card text-center">
+          <img ng-src="http://ddragon.leagueoflegends.com/cdn/{{main.version}}/img/champion/{{champion.key}}.png" alt="{{champion.name}} portrait">
+          <p>{{champion.name}}</p>
+        </div>
+      </a>
+    </div>
+  </div>
 </div>
