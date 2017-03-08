@@ -17,8 +17,8 @@ angular.module('leagueChampionsApp')
         // lista obtenida
         scope.index = data.data.data;
         scope.version = data.data.version;
-        console.log(scope.version);
-        console.log(scope.index);
+        // console.log(scope.version);
+        // console.log(scope.index);
       },function (data) {
         // error
         console.log(data);

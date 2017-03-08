@@ -11,7 +11,7 @@
 
   <div class="row" ng-show="main.index">
     <div class="col-xs-6" ng-repeat="champion in main.index | toArray | orderBy: 'name'">
-      <a href="#">
+      <a href="#!/champion/{{champion.key}}">
         <div class="card text-center">
           <img ng-src="http://ddragon.leagueoflegends.com/cdn/{{main.version}}/img/champion/{{champion.key}}.png" alt="{{champion.name}} portrait">
           <p>{{champion.name}}</p>

@@ -1,0 +1,62 @@
+.row {
+  width: 100%;
+  margin: 0; }
+
+.championView header {
+  height: 50px;
+  background: #060265;
+  padding: 10px; }
+  .championView header h1 {
+    margin: 0;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold; }
+.championView .info {
+  padding: 10px 20px; }
+  .championView .info * {
+    color: #fff; }
+  .championView .info .portrait {
+    width: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    padding-top: 100%;
+    position: relative; }
+    .championView .info .portrait img {
+      min-width: 100%;
+      transform: translate(-10px, -15px) scale(1.1);
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0; }
+  .championView .info .bar {
+    width: 100%;
+    height: 20px;
+    background: #fff; }
+.championView section {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.82);
+  margin-top: 20px; }
+  .championView section .section-head {
+    height: 40px;
+    font-size: 30px;
+    color: #fff;
+    background: #000;
+    line-height: 40px; }
+    .championView section .section-head span {
+      margin: 0; }
+.championView .spells-container img {
+  width: 15%;
+  height: auto; }
+.championView .spell-video video {
+  width: 100%; }
+.championView .stats {
+  color: #fff; }
+  .championView .stats span {
+    color: #06da02; }
+.championView .tips {
+  color: #fff; }
+.championView .skin img {
+  width: 100%; }
+
+/*# sourceMappingURL=championView.css.map */

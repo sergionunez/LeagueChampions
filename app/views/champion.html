@@ -1,0 +1,145 @@
+<div class="championView">
+  <header>
+    <h1>App name</h1>
+  </header>
+
+  <div class="container" ng-if="champion.data">
+    <!-- info section -->
+    <section class="info">
+      <div class="row">
+        <h2>{{champion.data.name}}</h2>
+        <h3>{{champion.data.title}}</h3>
+      </div>
+      <div class="row">
+        <div class="col-xs-6">
+          <div class="portrait">
+            <img ng-src="http://ddragon.leagueoflegends.com/cdn/{{champion.version}}/img/champion/{{champion.data.key}}.png" alt="{{champion.data.name}} portrait">
+          </div>
+        </div>
+        <div class="col-xs-6">
+          <p class="bar"></p>
+          <p class="bar"></p>
+          <p class="bar"></p>
+          <p class="bar"></p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <span>Spells</span>
+      </div>
+      <div class="spells-container">
+        <img ng-src="http://ddragon.leagueoflegends.com/cdn/{{champion.version}}/img/passive/{{champion.data.passive.image.full}}" alt="passive button">
+        <img ng-repeat="spell in champion.data.spells" ng-src="http://ddragon.leagueoflegends.com/cdn/{{champion.version}}/img/spell/{{spell.image.full}}" alt="{{spell.key}}">
+      </div>
+      <div class="spell-video">
+        <video src="https://lolstatic-a.akamaihd.net/champion-abilities/videos/mp4/0266_02.mp4" poster="https://lolstatic-a.akamaihd.net/champion-abilities/images/0266_02.jpg">
+          {{champion.data.name}} spell
+        </video>
+      </div>
+      <div class="row">
+        <div class="col-xs-5 spell-data">
+          <p>some spell data like range</p>
+        </div>
+        <div class="col-xs-7 spell-description">
+          <p>description of the spell</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <span>Stats</span>
+      </div>
+      <div class="stats">
+        <div class="row">
+          <!-- armor -->
+          <div class="col-xs-12">
+            <p>Armor: {{champion.data.stats.armor}} <span>(+ {{chammpion.data.stats.armorperlevel}} per level)</span></p>
+          </div>
+          <!-- attack damage -->
+          <div class="col-xs-12">
+            <p>Attack damage: {{champion.data.stats.attackdamage}} <span>(+ {{chammpion.data.stats.attackdamageperlevel}} per level)</span></p>
+          </div>
+          <!-- attack range -->
+          <div class="col-xs-12">
+            <p>Attack Range: {{champion.data.stats.attackrange}}</p>
+          </div>
+          <!-- attack speed -->
+          <div class="col-xs-12">
+            <p>Attack Speed: {{champion.data.stats.attackspeedoffset}} <span>(+ {{chammpion.data.stats.attackspeedperlevel}} per level)</span></p>
+          </div>
+          <!-- health -->
+          <div class="col-xs-12">
+            <p>Health: {{champion.data.stats.hp}} <span>(+ {{chammpion.data.stats.hpperlevel}} per level)</span></p>
+          </div>
+          <!-- health regeneration -->
+          <div class="col-xs-12">
+            <p>Health Regeneration: {{champion.data.stats.hpregen}} <span>(+ {{chammpion.data.stats.hpregenperlevel}} per level)</span></p>
+          </div>
+          <!-- movement speed -->
+          <div class="col-xs-12">
+            <p>Movement Speed: {{champion.data.stats.movespeed}}</p>
+          </div>
+          <!-- mana -->
+          <div class="col-xs-12">
+            <p>Mana: {{champion.data.stats.mp}} <span>(+ {{chammpion.data.stats.mpperlevel}} per level)</span></p>
+          </div>
+          <!-- mana regen -->
+          <div class="col-xs-12">
+            <p>Mana Regen: {{champion.data.stats.mpregen}} <span>(+ {{chammpion.data.stats.mpregenperlevel}} per level)</span></p>
+          </div>
+          <!-- magic resist -->
+          <div class="col-xs-12">
+            <p>Magic Resist: {{champion.data.stats.spellblock}} <span>(+ {{chammpion.data.stats.spellblockperlevel}} per level)</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <span>Strategy</span>
+      </div>
+      <div class="tips">
+        <h3>Playing as {{champion.data.name}}</h3>
+        <ul>
+          <li ng-repeat="tip in champion.data.allytips">{{tip}}</li>
+        </ul>
+      </div>
+      <div class="tips">
+        <h3>Playing against {{champion.data.name}}</h3>
+        <ul>
+          <li ng-repeat="tip in champion.data.enemytips">{{tip}}</li>
+        </ul>
+      </div>
+
+    </section>
+    <section>
+      <div class="section-head">
+        <span>Spootlight</span>
+      </div>
+      <!-- youtube embed video -->
+      <iframe width="100%" height="auto" src="https://www.youtube.com/embed/Rro20bR4jnQ" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <span>Lore</span>
+      </div>
+      <p ng-bind-html="champion.data.lore"></p>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <span>Skins</span>
+      </div>
+      <div class="skin" ng-if="champion.data">
+        <img src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/{{champion.data.key}}_0.jpg" alt="champion skin">
+      </div>
+    </section>
+
+  </div>
+
+</div>

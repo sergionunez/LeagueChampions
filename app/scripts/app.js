@@ -29,6 +29,11 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
+      .when('/champion/:key', {
+        templateUrl: 'views/champion.html',
+        controller: 'ChampionCtrl',
+        controllerAs: 'champion'
+      })
       .otherwise({
         redirectTo: '/'
       });
