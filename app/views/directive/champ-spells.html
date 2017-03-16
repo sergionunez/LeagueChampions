@@ -1,0 +1,23 @@
+<section>
+  <div class="section-head">
+    <span>Spells</span>
+  </div>
+  <div class="spells-container">
+    <img ng-src="http://ddragon.leagueoflegends.com/cdn/{{version}}/img/passive/{{passive.image.full}}" alt="passive button">
+    <img ng-repeat="spell in spells" src="http://ddragon.leagueoflegends.com/cdn/{{version}}/img/spell/{{spell.image.full}}" alt="{{spell.key}}">
+  </div>
+  <div class="spell-video">
+    <video src="https://lolstatic-a.akamaihd.net/champion-abilities/videos/mp4/0266_02.mp4" poster="https://lolstatic-a.akamaihd.net/champion-abilities/images/0266_02.jpg">
+      {{name}} spell
+    </video>
+  </div>
+  <div class="row">
+    <div class="col-xs-5 spell-data">
+      <p>some spell data like range</p>
+    </div>
+    <div class="col-xs-7 spell-description">
+      <p>description of the spell</p>
+      <p>{{passive.image.full}}</p>
+    </div>
+  </div>
+</section>

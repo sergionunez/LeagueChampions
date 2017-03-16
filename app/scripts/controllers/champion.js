@@ -22,7 +22,7 @@ angular.module('leagueChampionsApp')
             console.log("datos del campeon");
             console.log(data.data);
             scope.data = data.data;
-          })
+          });
         console.log("estamos en la version: "+res);
       });
 

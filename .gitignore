@@ -4,3 +4,4 @@
 /.sass-cache
 /bower_components
 *.css.map
+config.js
